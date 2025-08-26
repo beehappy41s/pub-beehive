@@ -1,0 +1,226 @@
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Amarante&family=Bodoni+Moda:opsz@6..96&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Faustina:wght@300&family=Lancelot&family=Luxurious+Roman&family=Oranienbaum&family=Philosopher&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quattrocento&family=Quintessential&family=Roboto+Mono:wght@300&family=Smooch+Sans:wght@300&family=Yuji+Syuku&display=swap');
+
+
+
+/* Universal Selector */
+
+html { 
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;  /* All elements include padding and borders in the box model calculations. */
+}
+
+/* Root Styling and Formats - BG, Img, Font, Color */
+
+:root {
+    /* Colors */
+    --primary-color: #ece0d1;
+    --secondary-color: #967259;
+    --text-color: #dacabc;
+    --background-color: #3e3740;
+    /* Fonts */
+    --main-font-family: 'Philosopher', serif;
+    --base-font-size: 18px;
+    --heading-font-size: 2em;
+}
+
+/* From here on down, testing Codepen.io Navbar and Landing Page Template  at: https://codepen.io/juliepark/pen/ROrxgZ */
+
+body {
+    margin: 0;
+    background: var(--background-color);
+    overflow-x: hidden;
+}
+
+/* Navigation */
+
+body #navbar {
+    background: #3e3740;
+    width: 100%;
+    height: 20px;
+    padding: 35px 45px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+
+    /* Links */
+
+   a {
+    font-family: 'Cormorant';
+    letter-spacing: 3px;
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    padding-right: 10%;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease-in-out;
+   }
+
+   a:hover {
+    text-transform:lowercase;
+    scale: 2;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgb(255, 230, 0), 0 0 20px rgb(255, 253, 139), 0 0 30px rgb(255, 249, 161); /* Multiple shadows for a stronger glow */
+   }
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+/* Landing Styling */
+
+
+.landing--container {
+  position: relative;
+  margin: 0;
+  background-image: url('../images/bee-header.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 95vh;
+  overflow: hidden;
+  z-index: 1.1;
+}
+
+.landing--container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/light-honeycomb-dark.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 1.5;
+    overflow: hidden;
+}
+
+.landing--title {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  p {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #3e3740;
+  }
+  h1 {
+    margin-top: -20px;
+    font-family: 'Cormorant Garamond';
+    color: var(--primary-color);
+    font-size: 3em;
+    text-shadow: 2px 2px 2px rgb(62, 55, 64,.4);
+  }
+}
+
+.primary-btn {
+  padding: 20px;
+  outline: 0;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border-radius: 25px;
+  font-weight: 100;
+  font-size: 0.6em;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.primary-btn:hover {
+    background-color:#967259ce;
+    color: var(--text-color);
+    transition: all 1s ease-out;
+    transform: scale(1.05);
+  }
+
+
+.landing--line {
+  background: var(--background-color);
+  width: 8%;
+  left: 46%;
+  top: 125%;
+  height: 7px;
+  position: absolute;
+}
+
+/* Section Style */
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.color-bg {
+  background: #ffd88556;
+}
+
+/* Footer */
+
+footer {
+  height: 20vh;
+  background: #3e3740;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.footer--social {
+  height: 100px;
+  padding-top: 15px;
+  i {
+    padding: 30px;
+    transition: all 1s ease-in-out;
+  }
+    i:hover {
+      color: var(--secondary-color);
+      transition: all 1s ease-out;
+      transform: scale(1.3);
+    }
+  }
+
+
+.footer--bottom {
+  width: 100%;
+  position: absolute;
+  height: 20%;
+  bottom: 0;
+}
+.footer--text {
+  font-size: .5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  span {
+    color: var(--text-color);
+  }
+  a  {
+    font-style: italic;
+    color: var(--text-color);
+  }
+    a:hover {
+      background-color: #967259;
+      color: #ece0d1;
+      transform: scale(2);
+    }
+  }
