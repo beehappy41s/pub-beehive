@@ -1,0 +1,92 @@
+<!-- Copy of nav.html for parallax/hero work -->
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="../assets/nav-parallax.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar" id="mainNavbar">
+    <div class="navbar-container"> <!-- Navbar Container -->
+        <ul class="nav-links nav-left"> <!-- Left Navigation Links -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="logo-container">
+            <img src="../images/beelogo.png" alt="Bee Happy Logo" class="logo-img"> <!-- Logo Image -->
+        </div>
+        <ul class="nav-links nav-right"> <!-- Right Navigation Links -->
+            <li><a href="#">Masterlist</a></li>
+            <li class="dropdown"><a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Resources</a>
+                <ul class="dropdown-menu"> <!-- Dropdown Menu -->
+                    <li><a href="#">Masterlist</a></li>
+                    <li><a href="#">Coding</a></li>
+                    <li><a href="#">Free Programs</a></li>
+                </ul>
+            </li>
+            <li><a href="#" id="contactBtn">Contact</a></li> <!-- Contact Button to open modal -->
+        </ul>
+        <div class="hamburger" aria-label="Open menu" tabindex="0">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <polygon points="16,4 28,10 28,22 16,28 4,22 4,10" fill="#ffe066" stroke="#a67c52" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="menu-overlay" id="menuOverlay">
+          <ul class="overlay-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Masterlist</a></li>
+            <li class="overlay-dropdown">
+              <a href="#" class="overlay-dropdown-toggle">Resources</a>
+              <ul class="overlay-dropdown-menu">
+                <li><a href="#">Masterlist</a></li>
+                <li><a href="#">Coding</a></li>
+                <li><a href="#">Free Programs</a></li>
+              </ul>
+            </li>
+            <li><a href="#" id="contactBtnOverlay">Contact</a></li>
+          </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section for Parallax -->
+<section class="hero-parallax">
+  <div class="hero-content">
+    <h1>The Beehive</h1>
+    <p>Welcome to the hive! Scroll down to see the parallax effect in action.</p>
+  </div>
+</section>
+
+<!-- Contact Modal -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<!-- Section with Info -->
+<section class="info-section">
+  <div class="info-content">
+    <h2>Welcome</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis magnam quisquam at quibusdam ad ullam earum, eaque porro quia corrupti neque in modi vitae illo a maxime consequuntur deleniti praesentium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, ab quis. Ab eum quibusdam odit expedita, iste, earum numquam molestias consectetur nam beatae enim dolorum consequuntur optio natus! Velit, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusantium debitis suscipit ullam iste itaque nemo hic pariatur non modi? Necessitatibus expedita aperiam deserunt voluptatum quidem quia distinctio deleniti iure?</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis magnam quisquam at quibusdam ad ullam earum, eaque porro quia corrupti neque in modi vitae illo a maxime consequuntur deleniti praesentium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, ab quis. Ab eum quibusdam odit expedita, iste, earum numquam molestias consectetur nam beatae enim dolorum consequuntur optio natus! Velit, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusantium debitis suscipit ullam iste itaque nemo hic pariatur non modi? Necessitatibus expedita aperiam deserunt voluptatum quidem quia distinctio deleniti iure?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis magnam quisquam at quibusdam ad ullam earum, eaque porro quia corrupti neque in modi vitae illo a maxime consequuntur deleniti praesentium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, ab quis. Ab eum quibusdam odit expedita, iste, earum numquam molestias consectetur nam beatae enim dolorum consequuntur optio natus! Velit, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusantium debitis suscipit ullam iste itaque nemo hic pariatur non modi? Necessitatibus expedita aperiam deserunt voluptatum quidem quia distinctio deleniti iure?</p>
+          <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, veritatis. Porro, quod quis. Officia ducimus eaque quisquam doloremque distinctio repudiandae. Explicabo accusantium natus assumenda quae ut quis, corporis blanditiis culpa?</blockquote>
+  </div>
+</section>
+
+<script src="../assets/nav-parallax.js"></script>
+</body>
+</html>
